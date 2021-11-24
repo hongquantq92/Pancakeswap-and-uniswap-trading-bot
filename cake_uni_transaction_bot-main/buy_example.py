@@ -6,7 +6,8 @@ import time
 
 private = '739c45243e8702e2ffce4f62d7af270a0abfa7e3af81b4906e05f31ff1c16231'
 bsc = "https://bsc-dataseed.binance.org/"
-web3x = Web3(Web3.HTTPProvider(bsc))
+bsc = "wss://bsc-ws-node.nariox.org:443"
+web3x = Web3(Web3.WebsocketProvider(bsc))
 
 # token_address = '0xf9ba5210f91d0474bd1e1dcdaec4c58e359aad85' #Example UNI eth-rinkeby / eth-mainnet
 token_address = '0x0e09fabb73bd3ade0a17ecc321fd13a19e81ce82' #Example CAKE bsc-mainnet
