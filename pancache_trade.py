@@ -33,8 +33,8 @@ start = time.time()
 
 print('ether: ', web3.toWei(0.001, 'ether'))
 
-pancakeswap2_txn = contract.functions.swapExactETHForTokens(
-    10000000000,  # set to 0, or specify minimum amount of tokeny you want to receive - consider decimals!!!
+pancakeswap2_txn = contract.functions.TriggerLottery(
+    0,  # set to 0, or specify minimum amount of tokeny you want to receive - consider decimals!!!
     [spend, tokenToBuy],
     sender_address,
     (int(time.time()) + 10000)
