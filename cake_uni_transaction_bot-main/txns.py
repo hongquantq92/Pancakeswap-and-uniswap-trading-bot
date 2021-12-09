@@ -5,9 +5,6 @@ import time
 import keys
 import sys
 
-# TODO: Add project secret to infura node 
-# TODO: Change prints to logging
-# TODO: Add testing for edge cases
 
 class Txn_bot(object):
     def __init__(self, token_address, quantity, net, slippage, gas_price):
@@ -83,6 +80,7 @@ class Txn_bot(object):
         return token_contract
 
     def get_amounts_out_buy(self):
+        print(self.router.functions.WETH().call(), self.token_address)
         return self.router.functions.getAmountsOut(
             int(self.quantity * self.slippage),
             [self.router.functions.WETH().call(), self.token_address]
